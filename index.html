@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopUp game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+<nav class="navbar">
+    <div class="logo">
+        <img src="Flower.jpg" alt="Logo">
+    </div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="nav-buttons">
+        <input type="text" placeholder="Search..." class="search-input">
+        <button class="login-btn">Login</button>
+        <button class="register-btn">Register</button>
+    </div>
+</nav>
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="Flower.jpg" alt="Slider Image 1">
+        </div>
+        <div class="slide">
+            <img src="Flower.jpg" alt="Slider Image 2"> 
+        </div>
+        <div class="slide">
+            <img src="Flower.jpg" alt="Slider Image 3">
+        </div>
+    </div>
+    <button class="slider-btn prev" onclick="prevSlide()">&#10094;</button>
+    <button class="slider-btn next" onclick="nextSlide()">&#10095;</button>
+</div>
+
+<style>
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+</style>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(n) {
+    const slider = document.querySelector('.slider');
+    if (n >= slides.length) currentSlide = 0;
+    if (n < 0) currentSlide = slides.length - 1;
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+    currentSlide++;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide--;
+    showSlide(currentSlide);
+}
+
+// Auto advance slides every 5 seconds
+setInterval(nextSlide, 5000);
+</script>
+
+<div class="game-grid">
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Mobile Legends">
+        <h3>Mobile Legends</h3>
+        <p>Popular MOBA Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="PUBG Mobile">
+        <h3>PUBG Mobile</h3>
+        <p>Battle Royale Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Free Fire">
+        <h3>Free Fire</h3>
+        <p>Battle Royale Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Fortnite">
+        <h3>Fortnite</h3>
+        <p>Battle Royale Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Dragon Raja">
+        <h3>Dragon Raja</h3>
+        <p>MMORPG Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+    <div class="game-card">
+        <img src="Flower.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>Racing Game</p>
+    </div>
+</div>
+
+<style>
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.game-card {
+    background: #241227;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-card h3 {
+    padding: 1rem;
+    margin: 0;
+    color: #f3d5d5;
+    font-size: 1.2rem;
+}
+
+.game-card p {
+    padding: 0 1rem 1rem;
+    color: #d8ecd2;
+    margin: 0;
+}
+</style>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>PRODUCTS</h4>
+            <ul>
+                <li><a href="#">Top up</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Subscription</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>QUICK LINKS</h4>
+            <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>ABOUT</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Refund Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="payment-methods">
+        <img src="Flower.jpg" alt="Sewa">
+        <img src="Flower.jpg" alt="U">
+        <img src="Flower.jpg" alt="Doku Pay">
+        <img src="Flower.jpg" alt="24/7">
+        <img src="Flower.jpg" alt="OVO">
+    </div>
+    <div class="footer-bottom">
+        <div class="logo">
+            <img src="logo.png" alt="Game Shop">
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="copyright">Copyright © 2023 Game Shop Up</p>
+    </div>
+</footer>
+
+<style>
+footer {
+    background-color: #1e0e38;
+    padding: 2rem;
+    color: white;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.payment-methods img {
+    height: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom .logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff6b00;
+}
+
+.copyright {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+</style>
+
+
+
+
+ 
+</body>
+</html>
